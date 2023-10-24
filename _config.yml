@@ -1,5 +1,13 @@
 title: Drake Watson
 logo: /assets/img/headshot.png
 #description:
-#show_downloads: true
+
+  <p align="center">
+  <a href="mailto:watsond1@uci.edu">Email</a> |
+  <a href="https://www.linkedin.com/in/drake-watson-733a8a20b/">LinkedIn</a> |
+  <a href="https://github.com/datadraco">GitHub</a> |
+    <a href="pdf/Academic-Resume.pdf">Resume</a>
+  </p>
+
+
 theme: jekyll-theme-minimal
