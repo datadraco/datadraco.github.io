@@ -27,6 +27,22 @@ The Data Programming project was based around the development of a rudimentary m
 
 ---
 
-### Project 2
+### Alcohol & Life Expectancy
+
+**Project Overview:** 
+
+<img src="assets/img/?raw=true"/>
+<img src="assets/img/?raw=true"/>
+<img src="assets/img/?raw=true"/>
+
+**Improvements:** 
+
+***Technical skills:***
+
+***Tools:*** 
+
+[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)]()
+[![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)]()
+
 
 ---
