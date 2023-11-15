@@ -14,7 +14,7 @@ The Data Programming project was based around the development of a rudimentary m
 <img src="assets/img/vg-sales-tab-bar.png?raw=true"/>
 <img src="assets/img/vg-sales-tree.png?raw=true"/>
 
-**Improvements:** The accuracy score could be improved through further model engineering and attribute tweaking. I also made an attempt at developing a regression model that predicted the total sales numbers of games, but due to the incomplete nature of the sales data in the datasets that I merged together I was unable to create an accuracte model (or test accurately). I would like to seek out datasets containing the complete scope of sales data in order to merge it with the dataset from this project in order to develop that sales prediction model.
+**Improvements:** The accuracy score could be improved through further model engineering and attribute tweaking. I also made an attempt at developing a regression model that predicted the total sales numbers of games, but due to the incomplete nature of the sales data in the datasets that I merged together I was unable to create an accurate model (or test accurately). I would like to seek out datasets containing the complete scope of sales data in order to merge it with the dataset from this project in order to develop that sales prediction model.
 
 ***Technical skills:*** data visualization, SQL, regression, machine learning
 
