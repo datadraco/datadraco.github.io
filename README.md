@@ -57,16 +57,15 @@ We worked with the null hypothesis that there is no relationship between the alc
 
 The web application consists of multiple tabs containing interactive visualizations that allow the user to filter by different values. The front page establishes an understanding of the datasets that are being used to generate the visualizations. The following 4 tabs on the web app allow the user to analyze the distributions of the data various attributes through histograms, bar charts, scatter plots, and finally chloropleth map. Each tab has text that adjusts to the currently viewed attribute, and the final chloropleth map has a time animation visualization that slowly moves through the years of the data set and adjusts the map and table values below.
 
-<img src="assets/img/alc-continent-wrap.png?raw=true"/>
-<img src="assets/img/alc-gdp.png?raw=true"/>
-<img src="assets/img/alc-kmeans.png?raw=true"/>
+<img src="assets/img/whr-dist.png?raw=true"/>
+<img src="assets/img/whr-chloropleth.png?raw=true"/>
 
-**Improvements:** 
+**Improvements:** There are some improvements to the application interface that I would like to iron out such as centering the table outputs, creating more reactive text, and formating some of the graphs in a more engaging manner. I could also make some small improvements such as adding the regression line to the scatterplot page as opposed to just listing the correlation value below the graph.
 
-***Technical skills:*** statistical analysis, regression, R
+***Technical skills:*** R, shinyapp, HTML
 
 ***Tools:*** RStudio, R Markdown
 
-[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](alcohol-life-expectancy/final_report.pdf)
-[![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)](https://github.com/datadraco/datadraco.github.io/tree/main/alcohol-life-expectancy)
+[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://drakerw.shinyapps.io/world-happiness-analysis/)
+[![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)](https://github.com/datadraco/datadraco.github.io/tree/main/whr-shinyapp)
 
