@@ -39,7 +39,7 @@ We worked with the null hypothesis that there is no relationship between the alc
 <img src="assets/img/alc-gdp.png?raw=true"/>
 <img src="assets/img/alc-kmeans.png?raw=true"/>
 
-**Improvements:** The next step that my partner and I wanted to take was to create some 3D visualizations to look at the interplay between GDP, alcohol consumption, and life expectancy. We would also like to merge in new attributes (i.e. types of alcoholic drinks consumed, countries that are impacted by war, etc.) to see if there are other key variabkles that may uncover new correlations.
+**Improvements:** The next step that my partner and I wanted to take was to create some 3D visualizations to look at the interplay between GDP, alcohol consumption, and life expectancy. We would also like to merge in new attributes (i.e. types of alcoholic drinks consumed, countries that are impacted by war, etc.) to see if there are other key variables that may uncover new correlations.
 
 ***Technical skills:*** statistical analysis, regression, R
 
