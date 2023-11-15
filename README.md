@@ -10,6 +10,10 @@ The Data Visualization project focused on analyzing sales traits through a diver
 
 The Data Programming project was based around the development of a rudimentary machine learning model that could estimate where certain games would see successful sales numbers across the different international markets. The model was trained on the international sales data from the given time period and developed using decision tree classification in the scikit-learn package. The project model had a 78% accuracy score for predicting what region a game would be most successful in.
 
+<img src="assets/img/vg-sales-tab-genre-heat.png?raw=true"/>
+<img src="assets/img/vg-sales-tab-bar.png?raw=true"/>
+<img src="assets/img/vg-sales-tree.png?raw=true"/>
+
 ---
 
 ### Project 2
