@@ -33,20 +33,20 @@ The Data Programming project was based around the development of a rudimentary m
 
 Every few years a new headline is circulated that strongly declares a positive or negative relationship between casual alcohol usage. These reports are usually written with the sole focus of reader engagement and are based upon small scale group studies, so my group chose to look at the issue more analytically by diving into the World Bank data repository which houses decades of government supplied demographic and behavioral data from around the world.
 
-We worked with the null hypothesis that there is no relationship between the alcohol consumption level of a given country and it's respective life expectancy, and through our statistical tests we failed to reject that hypothesis. Through statistical analysis, visualizations, and regression models we clearly uncovered the GDP or any given country as a confounding variable.
+We worked with the null hypothesis that there is no relationship between the alcohol consumption level of a given country and it's respective life expectancy, and through our statistical tests we failed to reject that hypothesis. It seemed that there was some relationahip based upon the initial plots (e.g. european countries drank more and lived longer, african countries drank less and lived shorter) but through further plotting and k-means testing we could see no strong relationship. Through statistical analysis, visualizations, and regression models we clearly uncovered the GDP of a given country as a confounding variable.
 
 <img src="assets/img/alc-continent-wrap.png?raw=true"/>
 <img src="assets/img/alc-gdp.png?raw=true"/>
 <img src="assets/img/alc-kmeans.png?raw=true"/>
 
-**Improvements:** 
+**Improvements:** The next step that my partner and I wanted to take was to create some 3D visualizations to look at the interplay between GDP, alcohol consumption, and life expectancy. We would also like to merge in new attributes (i.e. types of alcoholic drinks consumed, countries that are impacted by war, etc.) to see if there are other key variabkles that may uncover new correlations.
 
-***Technical skills:***
+***Technical skills:*** statistical analysis, regression, R
 
-***Tools:*** 
+***Tools:*** RStudio, R Markdown
 
-[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)]()
-[![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)]()
+[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](alcohol-life-expectancy/final_report.pdf)
+[![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)](https://github.com/datadraco/datadraco.github.io/tree/main/alcohol-life-expectancy)
 
 
 ---
