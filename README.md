@@ -29,11 +29,15 @@ The Data Programming project was based around the development of a rudimentary m
 
 ### Alcohol & Life Expectancy
 
-**Project Overview:** 
+**Project Overview:** The final project in my Computer Science and Social Science course at UW asked each group to analyze a social issue or question with data science techniques. My partner and I chose to look at the relationship between alcohol consumption and life expectancy on an international scale.
 
-<img src="assets/img/?raw=true"/>
-<img src="assets/img/?raw=true"/>
-<img src="assets/img/?raw=true"/>
+Every few years a new headline is circulated that strongly declares a positive or negative relationship between casual alcohol usage. These reports are usually written with the sole focus of reader engagement and are based upon small scale group studies, so my group chose to look at the issue more analytically by diving into the World Bank data repository which houses decades of government supplied demographic and behavioral data from around the world.
+
+We worked with the null hypothesis that there is no relationship between the alcohol consumption level of a given country and it's respective life expectancy, and through our statistical tests we failed to reject that hypothesis. Through statistical analysis, visualizations, and regression models we clearly uncovered the GDP or any given country as a confounding variable.
+
+<img src="assets/img/alc-continent-wrap.png?raw=true"/>
+<img src="assets/img/alc-gdp.png?raw=true"/>
+<img src="assets/img/alc-kmeans.png?raw=true"/>
 
 **Improvements:** 
 
