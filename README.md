@@ -2,7 +2,9 @@
 
 ---
 
-### Project 1
+### Video Game Sales Analysis & Prediction
+
+**Project Overview:** While at UW I chose to analyze the video game sales
 
 ---
 
