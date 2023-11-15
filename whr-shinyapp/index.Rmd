@@ -1,0 +1,192 @@
+---
+title: "World Happiness"
+author: "Drake Watson, Samir Chokr, Ryan Park, Ryan Vache (B5)"
+date: "2/22/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+source("analysis.R")
+
+```
+
+## Problem Domain
+
+The problem domain for this group project will be the happiness of the countries around the world. Using data about a countries demographics, health statistics, and happiness rating, we would like to evaluate what qualities and characteristics of a country indicate that it is a happy and healthy one, or an unhappy and unhealthy one. There is an abundance of data being collected about the countries of the world that many people are attempting to use to quantify the success and health of a country, and we are hoping to merge some of that data together to get some insight on how that data relates to each other. To better compare countries, data is calculated into indexes (climate index, crime index, etc.) so that there is a quantifiable way to evaluate countries against one another. Obviously this method is just a rough estimation, and the domain we are working with will be a rough estimation itself as the issue of happiness and health is a very vague and nuanced one, but we still hope to use these data sets to gain some valuable insight into the well-being of the world.
+
+We want to evaluate how these aspects relate to one another to see how a country's (or the world's) happiness rating is tied to a certain demographic statistic. We would also like to evaluate data sets independently to find any trends over the last half-decade to get an idea of how the world is changing for better or worse. Using data visualization techniques, we are hoping to uncover some insight that might not be immediately clear when just evaluating the tables of data.
+
+The domain of world happiness is important because the data that is positively correlated could help improve standards of living for large populations. Through analysis, we wish to identify the main factors that affect ones' subjective (and the collective) experience of happiness.
+
+We are hoping to uncover nuanced trends or relations that might give us a better idea about what makes a country happy.
+
+_Existing Projects/Analysis_
+
+- [Happiness and Life Satisfaction: Exploratory Data Analysis on World Happiness Report](https://towardsdatascience.com/happiness-and-life-satisfaction-ecdc7d0ab9a5#:~:text=Exploratory%20Data%20Analysis%20on%20World%20Happiness%20Report.&text=Is%20it%20to%20achieve%20happiness%20in%20some%20way%3F&text=The%202020%20report%20ranked%20156,on%20a%20Cantril%20ladder%20survey.)
+
+- [Cities and Happiness: A Global Ranking and Analysis](https://worldhappiness.report/ed/2020/cities-and-happiness-a-global-ranking-and-analysis/)
+
+---
+
+## Data Description
+
+The data sets that are used within this report are the World Happiness Report (one for each year 2015-2019) and Quality of Life data set from early 2020. The World Health Report contains an overall happiness score on a scale from 1-10, and then a few columns following the happiness score that estimate how each factor contributes to making life evaluations higher in each country. The Quality of Life data set contains data from the beginning of 2020 that rates many factors of a country with index scores to get an overall estimation of the quality of life in any given country. <br>
+
+---
+
+[**World Happiness Report**](https://www.kaggle.com/unsdsn/world-happiness): The happiness metric used in this data set is based upon data from the Gallup World Poll and has been presented by the United Nations since 2012. The scores provided are based on answers to the main life evaluation question asked in the Gallup World Poll. This question, known as the Cantril ladder, asks respondents to think of a ladder with the best possible life for them being a 10 and the worst possible life being a 0 and to rate their own current lives on that scale.
+
+```{r whr_table, echo=FALSE}
+
+kable(head(world_happiness_2019_df))
+
+```
+
+As seen in the table above, the World Happiness report gives us the country name, overall rank, happiness score, and then six more columns that attempt to quantify the influence that those factors have on the overall score. The columns following the happiness score estimate the extent to which each of six factors – economic production, social support, life expectancy, freedom, absence of corruption, and generosity – contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors. They have no impact on the total score reported for each country, but they do explain why some countries rank higher than others. (_Note: these factors were formatted and included differently from 2015-2019, so we converted all of them to match the format of 2019 seen above_) <br>
+
+---
+
+[**Quality of Life**](https://www.kaggle.com/dumbgeek/countries-dataset-2020?select=Quality+of+life+index+by+countries+2020.csv): This data set was originally generated for the [Countries Data Set](https://www.kaggle.com/dumbgeek/countries-dataset-2020) in order to provide demographic information about countries so that some correlations might be found with the spread of coronavirus in early 2020. This data was scraped from [Numbeo](https://www.numbeo.com/quality-of-life/) which is a crowd-sourced global database of quality of life statistics. The scores are in the form of indexes which is a technique that is widely used when attempting to rate and compare countries across different criteria.
+
+```{r qol_table, echo=FALSE}
+
+kable(head(qol_df))
+
+```
+
+As seen in the table above, the Quality of Life data set provides us with a country name, and then many columns representing demographic characteristics (overall life quality, safety, health care, etc.) that have been generalized into index scores so that they can be rated against one another. This is not an exact process as many of these aspects of life are very nuanced and subjective, but it is one of the best techniques that can be used to attempt to quantify the different traits of a country.
+
+---
+
+### Summary Analysis
+
+**World Happiness Report Time Series Overview** 
+
+- This data frame is a compilation of five separate csv files representing the individual World Happiness Reports from 2015-2019. There are some features that have been renamed and not included in the most recent iterations of the report, so for this study we are using a merged data frame that has converted all of the previous World Happiness Reports to the format of 2019 seen in the above table.
+
+- Of the 195 countries in the world, our latest World Happiness Report (2019) has observations for `r description_list$whr_num_rows` countries. So the analysis that we do for the remainder of the report will have some missing data for certain countries in the world.
+
+- To get an idea of the range of values, below is a table representing the min, max, and average happiness for every year in the merged data frame.
+
+```{r whr_stats_table, echo=FALSE}
+
+kable(whr_descriptive_df)
+
+```
+
+- The above table gives us the impression that the data is distributed fairly evenly given the difference between the median and mean values being quite close, and that the overall happiness of the world has been improving other than one specific dip that occurred in 2017. To get a better visualization of this, we can plot the happiness statistics of the world over the given time period.
+
+```{r happiness_stat_plot, echo=FALSE, fig.align = 'center'}
+
+plot(happiness_stats_plot)
+
+```
+
+- The above plot confirms our assumptions of the data being considerably constant over the 2015-2019 time period without much variation other than the slight decrease that occurred in 2017.
+
+**Quality of Life Overview**
+
+- This data frame contains columns that represent the names of countries and different index scores for those countries pertaining to different demographic issues. This data frame was formed by scraping a website called [Numbeo](https://www.numbeo.com/quality-of-life/) in 2019 and the columns include: `r description_list$qol_columns`.
+
+- The data set provides `r description_list$qol_num_countries` observations, meaning that it has significantly less countries in the data set as compared to the World Happiness Report. Later in the report when we are doing cross analysis using both of the data sets this will need to be taken into consideration as it may result in a significant amount of NA values in a merged data frame.
+
+- The index scores within any of the columns range from 0-200 and are used as way to weigh and compare different characteristics of countries to one another. This is a technique that has been used in scientific practices and social research fro several decades and is explained more in depth [here](https://en.wikipedia.org/wiki/Index_(statistics)).
+
+- To evaluate the distribution of the various index scores, we can display a table showing the mean, min, max, and median for all of the given columns.
+
+```{r qol_stats_table, echo=FALSE, fig.align = 'center'}
+
+kable(qol_description_df, include.rownames = FALSE)
+
+```
+
+- The above table shows us that the indexes are on different scales but all have very even distributions. The median and mean values for all of the various scores are very close to one another, and we can get a better grasp of this if we view them in the style of a histogram.
+
+```{r qol_histograms, echo=FALSE, fig.align = 'center'}
+
+plot(qol_hists)
+
+```
+
+- The distributions are placed differently due to the varying index scales, but the distributions are fairly normal. There seems to be a few slight outliers in purchase power but none seem to be significant enough to alter our calculations.
+
+- Histograms can be a bit hard to read because they are so sensitive to bin size, so we can take a more nuanced look at the distribution of the data with a density curve approach.
+
+```{r qol_density_curves, echo=FALSE, fig.align = 'center'}
+
+plot(qol_density_curves)
+
+```
+
+- The density curve visualization reinforces the fact that the data is relatively normally distributed across all of the different index scores provided within the Quality of Life data set.
+
+---
+
+## Specific Question Analysis
+
+### Question 1
+
+Of the top 10 happiest countries according to the World Happiness Report's metric, how do their quality of life and health care index scores compare? Will a happier country always have higher QOL (quality of life) and health care scores than less happy countries? In order to answer this question, we wrangled relevant data from the World Happiness Report data set and Quality of Life data set and combined them into one. We then filtered to select the top 10 happiest countries and selected their name, QOL score and health care score, and then pivoted into long format. Our data table shows us that the hypothesis that happier countries are always healthier with better quality of life is false. Right away we can see that Finland is happier than Denmark yet has lower QOL and health care scores by a small margin.
+
+```{r happiest_countries_qol_hc_plot, echo = FALSE, fig.align = 'center'}
+
+plot(happiest_countries_qol_hc_plot)
+
+```
+
+Based on the analysis, the theory that happier countries are always healthier with better quality of life is false. Finland is the happiest country in 2019 and has a life quality score of `r description_list$finland_qol` and a health care score of `r description_list$finland_hc`. The mean life quality is `r description_list$mean_qol` and the max is `r description_list$max_qol`. The mean health care score is `r description_list$mean_health_care` and the max is `r description_list$max_health_care`. These numbers clearly show that there is not a strong relationship between happiness ranking and quality of life and health care. These results were not what we were expecting, and we presume that the reason we are not seeing a strong relationship is because we are looking at the top 10 happiest countries, so they may be at a point of diminishing returns. At a lower happiness level those factors may be much more important, but at the highest levels all the countries have good scores so the differences are more negligent.
+
+---
+
+### Question 2
+
+Which factors from quality of life affect happiness score the most? By making a faceted scatter plot of every single factor and the happiness score, we can find a r value for each factor/category to examine the relationship and correlation between the values. R values go from -1 to 1. A more positive number is a stronger correlation and vice versa. Approximately above a 0.5 or below a -0.5 shows a correlation. 
+
+```{r qol_factors_scatterplot, echo = FALSE, fig.align = 'center'}
+
+suppressWarnings(plot(qol_factors_scatterplot))
+
+```
+
+These factors have a positive or negative correlation to the happiness score according to their r value. Health care `r description_list$r_value_health_care`, life quality `r description_list$r_value_life_quality`, living cost `r description_list$r_value_living_cost`, purchase power `r description_list$r_value_purchase_power`, and safety `r description_list$r_value_safety` had a positive correlation to happiness. Commute time `r description_list$r_value_commute_time` and pollution `r description_list$r_value_pollution` had a negative correlation. Purchase power and life quality had the biggest positive correlation while pollution had the worst negative correlation.
+
+
+### Question 3
+
+What areas of the world are the happiest? Using a map visualization we would like to analyze if there are certain areas of the world that are on average happier according to the World Happiness Report metric. This process involved the 2019 World Happiness Report and the `rworldmap` library. All of the countries in the World Happiness Report data frame were matched to mapping locations within the `rworldmap`'s `joinCountryData2Map()` function, but the report does not include happiness scores for every country in the world so there will be missing data from the visualization.
+
+```{r world_happiness_2019, echo = FALSE, fig.align = 'center'}
+
+mapCountryData(
+  mapped_data2019,
+  mapTitle = 'Happiness Scores in 2019',
+  nameColumnToPlot = 'score',
+  addLegend = T,
+  colourPalette = brewer.pal(7, 'BuPu')
+)
+
+```
+
+In the above visualization, we can clearly see that there is a focus of high happiness ratings in Western Europe, North America, and in Australia. This matches some of our expectations since the highest scorers in the World Happiness Report of 2019 were `r description_list$happiest_2019`, but it is a bit surprising to see the level of happiness through the Americas given the recent history of political and civil unrest. Through this analysis we can clearly see that the missing data is focused in Africa and the Middle East (shown by the white countries), which also happens to be surrounded by some of the lowest happiness scores in the report. This lines up with our expectations due to the excessive amount of warfare and upheaval that region has been experiencing in recent memory.
+
+
+### Question 4
+
+Now that we've evaluated where the happiest countries are in the most recent World Happiness Report, we would like to analyze which areas of the world have seen the biggest _shift_ in happiness over the last half decade by making use of all of the World Happiness Reports from 2015-2019. The data wrangling process involved creating a new column in the World Happiness Report Time Series data frame that represented the difference in happiness between 2019 and 2015 (mathematically calculated by subtracting 2015's score from 2019's). A positive score will represent a positive shift in happiness, a near 0 score will represent nearly no change in the 5 year time period, and a negative score will represent a negative shift in happiness. There were a few countries that had insufficient data to do this calculation (missing either 2015 or 2019 happiness score), so there are a few additional missing countries compared to the chloropleth map from the previous analysis question.
+
+```{r happiness_trends, echo = FALSE, fig.align = 'center'}
+
+mapCountryData(
+  mapped_data_trend,
+  mapTitle = 'Happiness Trends 2015-2019',
+  nameColumnToPlot = 'happy_shift',
+  addLegend = T,
+  colourPalette = brewer.pal(7, 'YlGnBu')
+)
+
+```
+
+The generated visualization had some very interesting results that went against our general expectations. The countries with the largest shifts in happiness over that 5 year time period were `r description_list$biggest_shifts`. The majority of those nations are on the African continent, and interestingly enough some of the nations that seemed to have the greatest decrease were also on the same continent. Looking further, the countries with the most negative shifts were `r description_list$worst_shifts`. It is incredibly interesting to see that Africa contains the majority of the countries that have seen the greatest shifts in happiness for both better and worse. This may be reflective of the instability of the region that is mostly due to the [meddling done by other countries](https://www.washingtonpost.com/politics/2019/07/12/foreign-intervention-africa-after-cold-war-looks-new-players-old-powers-africas-conflicts/).
+
+---

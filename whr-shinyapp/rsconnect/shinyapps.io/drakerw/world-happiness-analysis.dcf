@@ -1,0 +1,12 @@
+name: world-happiness-analysis
+title: world-happiness-analysis
+username:
+account: drakerw
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3782660
+bundleId: 4337112
+url: https://drakerw.shinyapps.io/world-happiness-analysis/
+when: 1615576446.56949
+asMultiple: FALSE
+asStatic: FALSE
