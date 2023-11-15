@@ -14,6 +14,17 @@ The Data Programming project was based around the development of a rudimentary m
 <img src="assets/img/vg-sales-tab-bar.png?raw=true"/>
 <img src="assets/img/vg-sales-tree.png?raw=true"/>
 
+**Improvements:** The accuracy score could be improved through further model engineering and attribute tweaking. I also made an attempt at developing a regression model that predicted the total sales numbers of games, but due to the incomplete nature of the sales data in the datasets that I merged together I was unable to create an accuracte model (or test accurately). I would like to seek out datasets containing the complete scope of sales data in order to merge it with the dataset from this project in order to develop that sales prediction model.
+
+***Technical skills:*** data visualization, SQL, regression, machine learning
+
+***Tools:*** Tableau, python
+
+[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](video-game-sales/vgsales-cs412/A3_Tableau_Visualizations.pdf)
+[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](video-game-sales/vgsales-cs163/report.pdf)
+[![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)](https://github.com/datadraco/datadraco.github.io/tree/main/video-game-sales)
+
+
 ---
 
 ### Project 2
