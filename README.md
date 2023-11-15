@@ -50,3 +50,23 @@ We worked with the null hypothesis that there is no relationship between the alc
 
 
 ---
+
+### World Happiness Report Web App
+
+**Project Overview:** For the final project in one of my Informatics courses at UW, we were directed to create a multitab shinyapp web application that allowed the user to explore a dataset of our choice. I chose to use the World Happiness Report provided by the UN & Quality of Life data set provided by Numbeo.
+
+The web application consists of multiple tabs containing interactive visualizations that allow the user to filter by different values. The front page establishes an understanding of the datasets that are being used to generate the visualizations. The following 4 tabs on the web app allow the user to analyze the distributions of the data various attributes through histograms, bar charts, scatter plots, and finally chloropleth map. Each tab has text that adjusts to the currently viewed attribute, and the final chloropleth map has a time animation visualization that slowly moves through the years of the data set and adjusts the map and table values below.
+
+<img src="assets/img/alc-continent-wrap.png?raw=true"/>
+<img src="assets/img/alc-gdp.png?raw=true"/>
+<img src="assets/img/alc-kmeans.png?raw=true"/>
+
+**Improvements:** 
+
+***Technical skills:*** statistical analysis, regression, R
+
+***Tools:*** RStudio, R Markdown
+
+[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](alcohol-life-expectancy/final_report.pdf)
+[![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)](https://github.com/datadraco/datadraco.github.io/tree/main/alcohol-life-expectancy)
+
