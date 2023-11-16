@@ -69,3 +69,21 @@ The web application consists of multiple tabs containing interactive visualizati
 [![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://drakerw.shinyapps.io/world-happiness-analysis/)
 [![Open Code](https://img.shields.io/badge/Jupyter-Open_Files-red?logo=Jupyter)](https://github.com/datadraco/datadraco.github.io/tree/main/whr-shinyapp)
 
+---
+
+### Ukraine Crisis Evaluation
+
+**Project Overview:** The final group project in my Data Visualization course at UW asked our group to develop informative and interactive visualizations in an Observable notebook covering an issue of our choice. My group selected the Ukrainian crisis and chose to focus on demographic and financial aspects of the ongoing war.
+
+Our report explores the demographic aspects of the different regions in Ukraine and dives into how the oblasts are made up by religion, language, and ethnicity in order to get an idea of the identities of the regions that are being most affected by the crisis. We also explored the different kinds of humanitarian need that are needed throughout various oblasts and the characteristics of those most in need. The report also explores what regions are seeing the most intense displacement as well as what regions are taking in the most displaced people. All of the visualizations throughout the report allow for some user exploration through several types of interacting (filtering, searching, hovering, etc.)
+
+<img src="assets/img/ukraine-aid-cost.png?raw=true"/>
+<img src="assets/img/ukraine-displaced-flee.png?raw=true"/>
+
+**Improvements:** At the time of creating the Observable notebook my group was relatively new to Julia and Javascript so there was some fine tuning to interactions and visualizations that we would've liked to complete given more time. I would also like to explore this crisis in the context of other wars by cross referencing with similar visualizations from previous conflicts in the region and from around the world to get a better idea of the severity of these figures.
+
+***Technical skills:*** Julia, Javascript
+
+***Tools:*** Observable
+
+[![Open Report](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://observablehq.com/d/c6d0bc66a041bca9)
