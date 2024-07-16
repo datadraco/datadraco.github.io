@@ -25,8 +25,6 @@ This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poste
 
 ---
 
----
-
 ### Video Game Sales Analysis & Prediction
 
 **Project Overview:** In both my Data Visualizations and Data Programming courses at UW I chose to analyze international video game sales data from 2013-2019.
