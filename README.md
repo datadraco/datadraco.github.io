@@ -12,6 +12,7 @@ We performed the study on data from 2010-2022 which compiled into over 200 milli
 
 This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poster seen below) as well as publication in the research journal Value in Health (link below)
 
+<img src="assets/img/narxcare-12month.png?raw=true"/>
 <img src="assets/img/narxcare-poster.png?raw=true"/>
 
 **Improvements:** Currently we are working on expanding the analysis to cover more of the features from the NarxCare documentation. We are hoping to pursue further publication and to bring more light to the topic of AI/ML models that may be inadvertently discriminatory in practice.
