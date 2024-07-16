@@ -4,16 +4,17 @@
 
 ### Examining Bias in the Narxcare Score: Unveiling Disparities in AI/ML Features for Opioid Prescribing Decisions
 
+<img src="assets/img/narxcare-poster.png?raw=true"/>
+
 **Project Overview:** As a member of Dr. Sherry Wang's research team at Chapman University, we examined the NarxCare clinical decision support system that is frequently put to use in the U.S. healthcare system. NarxCare is a software that prescription drug prescribers reference to see the risk score associated with their potential patient, and we chose to investigate how the risk score may be associated with "protected characteristics" (such as age, gender, income, etc.) that ideally should not influence a person's healthcare decisions.
 
 NarxCare's exact model for risk score is not public knowledge, but they do give some general insight into their algorithm, most notably the four main features which have the most weight in the model. Our study focused on the first of the four features: How many unique prescribers a patient has picked up prescriptions from. Our team at Chapman was granted access to the CURES-PDMP data (privacy proteced prescription records) that NarxCare bases their model off of as well, but in order to analyze the protected demographic information of the patients we needed to generalize their personal information by attaching their respective zipcode demographic information. We used official census data in order to accomplish this and from there we could analyze the generalized protected demographic traits of the individuals with high counts of unique prescribers. 
 
 We performed the study on data from 2010-2022 which compiled into over 200 million observations. Dealing with such a large data set led to unique challenges in the data wrangling and analysis, but we settled upon performing t-tests on the means of the two subgroups (people with low unique prescribers in a certain timeframe vs people with high unique prescribers in a certain timeframe) across 4 different timeframes (2 months, 6 months, 12 months, and 24 months). Our results found that there were some significant associations with the protected characteristics and our full results can be seen in the example picture and poster below.
 
-This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poster seen below) as well as publication in the research journal Value in Health (link below)
+This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poster seen above) as well as publication in the research journal Value in Health (link below)
 
 <img src="assets/img/narxcare-12month.png?raw=true"/>
-<img src="assets/img/narxcare-poster.png?raw=true"/>
 
 **Improvements:** Currently we are working on expanding the analysis to cover more of the features from the NarxCare documentation. We are hoping to pursue further publication and to bring more light to the topic of AI/ML models that may be inadvertently discriminatory in practice.
 
