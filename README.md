@@ -10,6 +10,8 @@
 
 NarxCare's exact model for risk score is not public knowledge, but they do give some general insight into their algorithm, most notably the four main features which have the most weight in the model. Our study focused on the first of the four features: How many unique prescribers a patient has picked up prescriptions from. Our team at Chapman was granted access to the CURES-PDMP data (privacy proteced prescription records) that NarxCare bases their model off of as well, but in order to analyze the protected demographic information of the patients we needed to generalize their personal information by attaching their respective zipcode demographic information. We used official census data in order to accomplish this and from there we could analyze the generalized protected demographic traits of the individuals with high counts of unique prescribers. 
 
+<img src="assets/img/narxcare-12month.png?raw=true"/>
+
 We performed the study on data from 2010-2022 which compiled into over 200 million observations. Dealing with such a large data set led to unique challenges in the data wrangling and analysis, but we settled upon performing t-tests on the means of the two subgroups (people with low unique prescribers in a certain timeframe vs people with high unique prescribers in a certain timeframe) across 4 different timeframes (2 months, 6 months, 12 months, and 24 months). Our results found that there were some significant associations with the protected characteristics and our full results can be seen in the example picture and poster below.
 
 This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poster seen above) as well as publication in the research journal Value in Health (link below)
@@ -20,7 +22,7 @@ This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poste
 
 ***Tools:*** python, R, jupyter
 
-[![Publication Link](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://medium.com/@drake88watson/investigating-the-quarterback-projection-problem-with-statistics-and-neural-networks-9fff3a83f2bd)
+[![Publication Link](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://www.valueinhealthjournal.com/article/S1098-3015(24)01803-5/abstract)
 
 ---
 
@@ -30,11 +32,18 @@ This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poste
 
 This project required domain knowledge, research, communication, data science, and presentation skills to build from the ground up. I've written a comprehensive article about the process and results on Medium, and the article can be found below. The database was also posted to the website Kaggle for public accessability and is linked within the article.
 
+<img src="assets/img/qb-plot.png?raw=true"/>
+
+<img src="assets/img/epoch-batch.png?raw=true"/>
+
 **Improvements:** I'm hoping to further develop this project as I gain machine learning expertise and through further data collection. This research could also be applied in a similar fashion to other positions in the NFL or other sports entirely.
 
 ***Technical skills:*** database design, statistical analysis, visualization, machine learning, writing
 
 ***Tools:*** python, jupyter, sklearn, keras, R
+
+[![Publication Link](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://medium.com/@drake88watson/investigating-the-quarterback-projection-problem-with-statistics-and-neural-networks-9fff3a83f2bd)
+
 
 ---
 
