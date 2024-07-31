@@ -14,15 +14,27 @@ We performed the study on data from 2010-2022 which compiled into over 200 milli
 
 This study was accepted for presentation at the ISPOR 2024 in Atlanta, GA (poster seen above) as well as publication in the research journal Value in Health (link below)
 
-<img src="assets/img/narxcare-12month.png?raw=true"/>
-
 **Improvements:** Currently we are working on expanding the analysis to cover more of the features from the NarxCare documentation. We are hoping to pursue further publication and to bring more light to the topic of AI/ML models that may be inadvertently discriminatory in practice.
 
 ***Technical skills:*** data wrangling, statistical analysis, visualization
 
 ***Tools:*** python, R, jupyter
 
-[![Publication Link](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://www.valueinhealthjournal.com/article/S1098-3015(24)01803-5/abstract)
+[![Publication Link](https://img.shields.io/badge/PDF-View_Report-red?logo=MicrosoftWord)](https://medium.com/@drake88watson/investigating-the-quarterback-projection-problem-with-statistics-and-neural-networks-9fff3a83f2bd)
+
+---
+
+### NFL Quarterback Projection: Database Creation + Neural Network Analysis
+
+**Project Overview:** The science and practice of NFL quarterback projection is something that has intrigued me as a lifelong NFL fan, so I built up a database and performed my own analysis on every quarterback drafted into the NFL since 2000. This personal project consisted of constructing a database of meaningful statistics about every quarterback, problem solving to ensure that the results of the analysis were truly reflective of the real world phenomenon I was interested in, and applying neural network and linear regression techniques to uncover any hidden patterns.
+
+This project required domain knowledge, research, communication, data science, and presentation skills to build from the ground up. I've written a comprehensive article about the process and results on Medium, and the article can be found below. The database was also posted to the website Kaggle for public accessability and is linked within the article.
+
+**Improvements:** I'm hoping to further develop this project as I gain machine learning expertise and through further data collection. This research could also be applied in a similar fashion to other positions in the NFL or other sports entirely.
+
+***Technical skills:*** database design, statistical analysis, visualization, machine learning, writing
+
+***Tools:*** python, jupyter, sklearn, keras, R
 
 ---
 
